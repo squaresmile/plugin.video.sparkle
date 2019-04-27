@@ -19,7 +19,7 @@ CLIENT_SECRET = 'sfiPkzKDd8LZl3Ie1WLAvpCICH4'
 USER_AGENT = 'sparkle streams 1.0'
 
 class SubRedditEvents(object):
-    as_regex_str = r'(acestream://[^$\s]+)'
+    as_regex_str = r'([a-z0-9]{40})'
 
     def __init__(self, username=None, password=None, client=None):
         self.client = client or Reddit(client_id=CLIENT_ID,
