@@ -46,7 +46,7 @@ class SubRedditEvents(object):
         """
         links = []
         for entry in body.split('\n'):
-            res = re.findall('(.*)(acestream://[a-z0-9]+)\s*(.*)', entry)
+            res = re.findall('(.*)([a-z0-9]{40})\s*(.*)', entry)
             if res:
                 pre, acelink, post = res[0]
                 if len(pre.strip()) > len(post.strip()):
